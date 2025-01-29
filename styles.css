@@ -29,7 +29,9 @@ p {
   gap: 5px;
   max-width: 350px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a8a8a8;
+  transition: 0.5s ease-in-out;
+
   overflow: hidden;
   margin: 0 auto;
 }
@@ -37,16 +39,26 @@ p {
 .profile-image {
   width: 100%;
   margin: 0 auto;
+  transition: 0.5s ease-in-out;
+}
+
+.profile-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+}
+
+.profile-card:hover .profile-image {
+  transform: scale(1.1);
 }
 
 #utc-time {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #000000b0;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #00000093;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
 }
 
 .profile-info {
@@ -111,6 +123,10 @@ button {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.contact-item a:hover {
+  color: #1c0f96;
 }
 
 .contact-item img {

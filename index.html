@@ -89,11 +89,11 @@
     </div>
 
     <script>
-      function updateUTCTime() {
-        const now = new Date();
-        document.getElementById('utc-time').textContent =
-          now.toISOString().split('.')[0] + ' UTC';
-      }
+    function updateUTCTime() {
+  const now = new Date();
+  document.getElementById("utc-time").textContent = now.toUTCString().replace("GMT", "UTC");;
+}
+
       updateUTCTime();
       setInterval(updateUTCTime, 1000);
     </script>
