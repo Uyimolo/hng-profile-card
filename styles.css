@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  padding: 20% 2%;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a,
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.profile-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#utc-time {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000000b0;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px 20px 0 0;
+  transform: translateY(-50px);
+  background-color: #fff;
+  padding: 20px 20px 0px;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 20px;
+  line-height: 1;
+  color: #333;
+  padding: 5px 0;
+  font-weight: 700;
+}
+
+button {
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  text-wrap: nowrap;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+}
+
+.job-title {
+  font-weight: 600;
+  color: #4b4b4b;
+  /* text-align: center; */
+}
+
+.bio {
+  /* text-align: center; */
+  padding-bottom: 10px;
+  border-bottom: 3px solid #f0f0f0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  /* justify-content: center; */
+  margin-top: 10px;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}

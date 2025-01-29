@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Urhoghide Justin Uyioghosa</title>
+  </head>
+  <body>
+    <!-- Profile card -->
+    <div class="profile-card">
+      <!-- first section (image) -->
+      <img
+        src="/images/uyiprofile.jpg"
+        alt="profile image"
+        class="profile-image"
+        data-testid="profilePicture" />
+
+      <p id="utc-time" data-testid="currentUTCTime"></p>
+
+      <div class="profile-info">
+        <!-- Name -->
+        <div class="name-container">
+          <div class="">
+            <h1 class="name" data-testid="fullName">
+              Urhoghide Justin Uyioghosa
+            </h1>
+
+            <!-- job title -->
+            <p class="job-title" data-testid="jobTitle">Frontend Developer</p>
+          </div>
+
+          <!-- <button>Portfolio</button> -->
+        </div>
+
+        <!-- short bio -->
+        <p class="bio paragraph" data-testid="shortBio">
+          Frontend developer skilled in React, Next.js, and Tailwind. Passionate
+          about building scalable web applications.
+        </p>
+
+        <!-- contact section -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="/images/email-svgrepo-com.svg" alt="email address" />
+
+            <a href="mailto:" data-testid="email"
+              >uyijustindavid@gmail.com
+              <span
+                ><img
+                  src="/images/diagonal-arrow-right-up-svgrepo-com.svg"
+                  alt="diagonal arrow facing up" /></span
+            ></a>
+          </div>
+
+          <div class="contact-item">
+            <img src="/images/phone-svgrepo-com.svg" alt="phone number" />
+            <a href="tel:+2348155651732"
+              >+234-815-565-1732
+              <span
+                ><img
+                  src="/images/diagonal-arrow-right-up-svgrepo-com.svg"
+                  alt="diagonal arrow facing up"
+              /></span>
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <img src="/images/location-svgrepo-com.svg" alt="location" />
+            <p data-testid="currentLocation">Benin-city, Nigeria</p>
+          </div>
+        </div>
+
+        <!-- social links -->
+        <div class="social-links" data-testid="socialLinks">
+          <a data-testid="socialLinks" href="https://x.com/codeFrontLine"
+            ><img src="/images/icons8-x-logo.svg" alt="x logo"
+          /></a>
+
+          <a data-testid="socialLinks" href="https://linkedin.com/in/uyighide"
+            ><img src="/images/linkedin-svgrepo-com.svg" alt="linkedin logo"
+          /></a>
+
+          <a data-testid="socialLinks" href="https://github.com/uyimolo"
+            ><img src="/images/github-142-svgrepo-com.svg" alt="linkedin logo"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function updateUTCTime() {
+        const now = new Date();
+        document.getElementById('utc-time').textContent =
+          now.toISOString().split('.')[0] + ' UTC';
+      }
+      updateUTCTime();
+      setInterval(updateUTCTime, 1000);
+    </script>
+  </body>
+</html>
