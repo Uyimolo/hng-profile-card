@@ -10,13 +10,15 @@
     <!-- Profile card -->
     <div class="profile-card">
       <!-- first section (image) -->
-      <img
-        src="/images/uyiprofile.jpg"
-        alt="profile image"
-        class="profile-image"
-        data-testid="profilePicture" />
+      <div class="profile-image-container">
+        <img
+          src="/images/uyiprofile.jpg"
+          alt="profile image"
+          class="profile-image"
+          data-testid="profilePicture" />
 
-      <p id="utc-time" data-testid="currentUTCTime"></p>
+        <p id="utc-time" data-testid="currentTimeUTC"></p>
+      </div>
 
       <div class="profile-info">
         <!-- Name -->
@@ -29,8 +31,6 @@
             <!-- job title -->
             <p class="job-title" data-testid="jobTitle">Frontend Developer</p>
           </div>
-
-          <!-- <button>Portfolio</button> -->
         </div>
 
         <!-- short bio -->
@@ -44,7 +44,7 @@
           <div class="contact-item">
             <img src="/images/email-svgrepo-com.svg" alt="email address" />
 
-            <a href="mailto:" data-testid="email"
+            <a href="mailto:uyijustindavid@gmail.com" data-testid="email"
               >uyijustindavid@gmail.com
               <span
                 ><img
@@ -73,15 +73,15 @@
 
         <!-- social links -->
         <div class="social-links" data-testid="socialLinks">
-          <a data-testid="socialLinks" href="https://x.com/codeFrontLine"
+          <a href="https://x.com/codeFrontLine"
             ><img src="/images/icons8-x-logo.svg" alt="x logo"
           /></a>
 
-          <a data-testid="socialLinks" href="https://linkedin.com/in/uyighide"
+          <a href="https://linkedin.com/in/uyighide"
             ><img src="/images/linkedin-svgrepo-com.svg" alt="linkedin logo"
           /></a>
 
-          <a data-testid="socialLinks" href="https://github.com/uyimolo"
+          <a href="https://github.com/uyimolo"
             ><img src="/images/github-142-svgrepo-com.svg" alt="linkedin logo"
           /></a>
         </div>
@@ -89,10 +89,12 @@
     </div>
 
     <script>
-    function updateUTCTime() {
-  const now = new Date();
-  document.getElementById("utc-time").textContent = now.toUTCString().replace("GMT", "UTC");;
-}
+      function updateUTCTime() {
+        const now = new Date();
+        document.getElementById('utc-time').textContent = now
+          .toUTCString()
+          .replace('GMT', 'UTC');
+      }
 
       updateUTCTime();
       setInterval(updateUTCTime, 1000);
